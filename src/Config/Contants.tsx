@@ -1,0 +1,1 @@
+export const GOFUNDMEURL="https://www.gofundme.com/f/fundraising-for-youth-victims-of-nepal-anticorruption-rally/widget/large?sharesheet=undefined&attribution_id=sl:577460b0-5dd3-4799-ac05-870b9341c3ce"

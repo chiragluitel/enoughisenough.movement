@@ -6,6 +6,7 @@ import FeedPage from "./Pages/FeedPage";
 import PostDetailPage from "./Pages/PostDetailPage";
 import NewPostPage from "./Pages/NewPostPage";
 import Navbar from "./components/Navigation/Navbar";
+import DonatePage from "./Pages/DonatePage";
 
 const Placeholder = ({ title }: { title: string }) => (
     <div className="container mx-auto px-4 py-24">
@@ -33,7 +34,7 @@ const routes: RouteObject[] = [
             { path: 'newpost', element: <NewPostPage /> },
             { path: 'detail/:postID', element: <PostDetailPage /> },
             { path: 'events', element: <Placeholder title="Events" /> },
-            { path: 'donate', element: <Placeholder title="Donate" /> },
+            { path: 'donate', element: <DonatePage /> },
             { path: 'about', element: <Placeholder title="About" /> },
         ]
     }
