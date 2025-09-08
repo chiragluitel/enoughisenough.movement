@@ -8,7 +8,7 @@ const Navbar = () => {
     console.log(user);
     return (
         <>
-        {user ? (<NavbarForLoggedIn />):(<NavbarForLoggedOut />) }
+        {user ? (<NavbarForLoggedIn profileId={user.id} />):(<NavbarForLoggedOut />) }
         </>
     )
 }

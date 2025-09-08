@@ -3,12 +3,16 @@ import {
     FaNewspaper,
     FaCalendarAlt,
     FaHandHoldingHeart,
-    FaInfoCircle,
+    FaUser,
   } from "react-icons/fa";
   import NavbarOptions from "./NavbarOptions";
   import { Link } from "react-router-dom";
-  
-  const NavbarForLoggedIn = () => {
+
+  interface NavbarForLoggedInProps {
+    profileId: string
+  }
+  const NavbarForLoggedIn:React.FC<NavbarForLoggedInProps> = ({profileId}) => {
+    const profile = `profile/${profileId}`
     return (
       <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="w-full px-4 relative h-14 flex items-center">
@@ -23,7 +27,7 @@ import {
             <NavbarOptions label="Feed" navigateTo="/feed" icon={<FaNewspaper />} />
             <NavbarOptions label="Events" navigateTo="/events" icon={<FaCalendarAlt />} />
             <NavbarOptions label="Donate" navigateTo="/donate" icon={<FaHandHoldingHeart />} />
-            <NavbarOptions label="About" navigateTo="/about" icon={<FaInfoCircle />} />
+            <NavbarOptions label="Profile" navigateTo={profile} icon={<FaUser />} />
           </nav>
         </div>
       </div>

@@ -16,3 +16,21 @@ export type PostData = {
     likes?: number;
     comments?: number;
 };
+
+export type EventData = {
+    id: string;
+    title: string;
+    description: string;
+    date: string;
+    time: string;
+    location: string;
+    organizer: {
+        name: string;
+        avatarUrl: string;
+    };
+    imageUrl?: string;
+    attendees: number;
+    maxAttendees?: number;
+    category: 'protest' | 'meeting' | 'workshop' | 'fundraiser' | 'other';
+    status: 'upcoming' | 'ongoing' | 'completed' | 'cancelled';
+};
