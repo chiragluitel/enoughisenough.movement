@@ -1,7 +1,9 @@
 import { createBrowserRouter, Outlet, type RouteObject } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import NavbarForLoggedIn from "./components/Navigation/NavbarForLoggedIn";
+// import NavbarForLoggedIn from "./components/Navigation/NavbarForLoggedIn";
 import NavbarForLoggedOut from "./components/Navigation/NavbarForLoggedOut";
+import LoginPage from "./Pages/Authentication/LoginPage";
+import SignupPage from "./Pages/Authentication/SignupPage";
 
 const Placeholder = ({ title }: { title: string }) => (
     <div className="container mx-auto px-4 py-24">
@@ -22,7 +24,9 @@ const routes: RouteObject[] = [
             </div>
         ),
         children:[
-            { index: true, element: <LandingPage /> },
+            {index:true, element: <LandingPage />},
+            {path: 'login', element: <LoginPage /> },
+            {path: 'signup', element: <SignupPage />},
             { path: 'feed', element: <Placeholder title="Feed" /> },
             { path: 'events', element: <Placeholder title="Events" /> },
             { path: 'donate', element: <Placeholder title="Donate" /> },
