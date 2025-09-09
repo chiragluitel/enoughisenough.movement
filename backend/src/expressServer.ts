@@ -19,7 +19,7 @@ eieExpressServer.get('/', (req: Request, res: Response) => {
     res.send('Welcome to EnoughISEnough');
 })
 
-eieExpressServer.use('/profile', userRouter)
+eieExpressServer.use('/users', userRouter)
 eieExpressServer.use('/posts', postsRouter)
 eieExpressServer.use('/events', eventsRouter)
 eieExpressServer.use('/media', mediaRouter)

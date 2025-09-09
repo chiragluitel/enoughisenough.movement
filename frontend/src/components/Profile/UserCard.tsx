@@ -1,4 +1,4 @@
-import { FaEdit, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaUserPlus } from 'react-icons/fa';
+import { FaEdit, FaMapMarkerAlt, FaCalendarAlt, FaUserPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import type { UserProfile } from '../../types';
 

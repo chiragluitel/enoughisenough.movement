@@ -5,23 +5,46 @@ import Post from '../components/Feed/Post';
 import EventCard from '../components/Events/EventCard';
 import { currentUser } from '../mocked_DB/UserProfile';
 import { samplePosts } from '../mocked_DB/Posts';
-import { sampleEvents } from '../mocked_DB/Events';
 import CustomButton from '../components/CustomButton';
 import { useSignOut } from './Authentication/useSignOut';
 import Spinner from '../helpers/Spinner';
 import { useNavigate } from 'react-router-dom';
+import useGetAllEvents from '../hooks/Database/useGetAllEvents';
+import { useAuthContext } from '../hooks/Context/useAuthContext';
+import useUserInfo from '../hooks/Database/useUserInfo';
+import useGetAllPosts from '../hooks/Database/useGetAllPosts';
 
 const ProfilePage = () => {
+    const {user} = useAuthContext();
+    if(!user){
+        return 
+        (<>
+
+        </>)
+    }
     const [activeTab, setActiveTab] = useState<'posts' | 'events'>('posts');
+    
+    const {userinfo} = useUserInfo(user.id)
+    // // if (!userinfo){
+    // //     return (
+    // //         <>
+    // //         Unauthorised
+    // //         </>
+    // //     )
+    // // }
+
     const {signOut, isPending}=useSignOut();
+    const {events, loading} = useGetAllEvents()
+    const {posts} = useGetAllPosts()
     const navigate = useNavigate();
+    console.log(userinfo)
     const userPosts = useMemo(() => 
-        samplePosts.filter(post => post.author.username === currentUser.username),
+        posts.filter(post => post.author.username === 'chirag.luitel'),
         []
     );
 
     const userEvents = useMemo(() => 
-        sampleEvents.filter(event => event.organizer.name === currentUser.displayName),
+        events.filter(event => event.organizer.displayName === currentUser.displayName),
         []
     );
 
