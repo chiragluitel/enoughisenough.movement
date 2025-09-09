@@ -34,3 +34,43 @@ export type EventData = {
     category: 'protest' | 'meeting' | 'workshop' | 'fundraiser' | 'other';
     status: 'upcoming' | 'ongoing' | 'completed' | 'cancelled';
 };
+
+export type UserProfile = {
+    id: string;
+    username: string;
+    displayName: string;
+    email: string;
+    avatarUrl: string;
+    bio?: string;
+    location?: string;
+    joinDate: string;
+    postsCount: number;
+    eventsCount: number;
+    followersCount: number;
+    followingCount: number;
+};
+
+export type ProfileFormData = {
+    displayName: string,
+    username: string,
+    email: string,
+    bio: string,
+    location: string,
+    avatarUrl: string,
+};
+
+export type EventFormData = {
+    title: string;
+    description: string;
+    date: string;
+    time: string;
+    location: string;
+    category: 'protest' | 'meeting' | 'workshop' | 'fundraiser' | 'other';
+    maxAttendees: string;
+    imageUrl: string;
+};
+
+export type EventFormProps = {
+    initialData?: Partial<EventFormData>;
+    onSubmit: (data: EventFormData) => void;
+};

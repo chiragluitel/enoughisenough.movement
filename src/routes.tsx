@@ -5,10 +5,12 @@ import SignupPage from "./Pages/Authentication/SignupPage";
 import FeedPage from "./Pages/FeedPage";
 import PostDetailPage from "./Pages/PostDetailPage";
 import NewPostPage from "./Pages/NewPostPage";
+import ProfilePage from "./Pages/ProfilePage";
+import EditProfilePage from "./Pages/EditProfilePage";
+import CreateEventPage from "./Pages/CreateEventPage";
 import Navbar from "./components/Navigation/Navbar";
 import DonatePage from "./Pages/DonatePage";
 import EventsPage from "./Pages/EventsPage";
-import ProfilePage from "./Pages/ProfilePage";
 
 const routes: RouteObject[] = [
     {
@@ -30,7 +32,9 @@ const routes: RouteObject[] = [
             { path: 'detail/:postID', element: <PostDetailPage /> },
             { path: 'events', element: <EventsPage /> },
             { path: 'donate', element: <DonatePage /> },
-            { path: 'profile/:profileId', element: <ProfilePage /> },
+            { path: 'profile', element: <ProfilePage /> },
+            { path: 'editprofile/:profileId', element: <EditProfilePage /> },
+            { path: 'newevent', element: <CreateEventPage /> },
         ]
     }
 ]

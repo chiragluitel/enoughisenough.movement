@@ -27,7 +27,7 @@ import {
             <NavbarOptions label="Feed" navigateTo="/feed" icon={<FaNewspaper />} />
             <NavbarOptions label="Events" navigateTo="/events" icon={<FaCalendarAlt />} />
             <NavbarOptions label="Donate" navigateTo="/donate" icon={<FaHandHoldingHeart />} />
-            <NavbarOptions label="Profile" navigateTo={profile} icon={<FaUser />} />
+            <NavbarOptions label="Profile" navigateTo='/profile' icon={<FaUser />} />
           </nav>
         </div>
       </div>
