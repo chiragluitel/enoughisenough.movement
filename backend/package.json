@@ -1,0 +1,26 @@
+{
+  "name": "eie_backend",
+  "version": "1.1.1",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/expressServer.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.883.0",
+    "@aws-sdk/s3-request-presigner": "^3.883.0",
+    "@types/express": "^5.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "nodemon": "^3.1.10"
+  }
+}
