@@ -6,10 +6,15 @@ import EventCard from '../components/Events/EventCard';
 import { currentUser } from '../mocked_DB/UserProfile';
 import { samplePosts } from '../mocked_DB/Posts';
 import { sampleEvents } from '../mocked_DB/Events';
+import CustomButton from '../components/CustomButton';
+import { useSignOut } from './Authentication/useSignOut';
+import Spinner from '../helpers/Spinner';
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
     const [activeTab, setActiveTab] = useState<'posts' | 'events'>('posts');
-
+    const {signOut, isPending}=useSignOut();
+    const navigate = useNavigate();
     const userPosts = useMemo(() => 
         samplePosts.filter(post => post.author.username === currentUser.username),
         []
@@ -23,6 +28,11 @@ const ProfilePage = () => {
     const handleJoinEvent = (eventId: string) => {
         alert(`Joining event ${eventId} (demo)`);
     };
+    const handleSignout = async (e : React.MouseEvent<HTMLButtonElement>) =>{
+        e.preventDefault();
+        await signOut();
+        navigate('/');
+    }
 
     return (
         <div className="bg-gray-50 min-h-screen">
@@ -31,6 +41,10 @@ const ProfilePage = () => {
 
                     <div className="lg:col-span-1">
                         <UserCard user={currentUser} isOwnProfile={true} />
+                        <div className='pt-4'>
+                        {isPending ? (<Spinner />):( <CustomButton label='Logout' onClick={handleSignout} />)}
+                        </div>
+                        
                     </div>
 
                     <div className="lg:col-span-3">
