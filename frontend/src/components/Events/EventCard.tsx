@@ -77,7 +77,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, onJoin }) => {
                     
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                         <FaUser className="text-gray-400" />
-                        <span>{organizer.name}</span>
+                        <span>{organizer.displayName}</span>
                     </div>
                     
                     <div className="flex items-center gap-2 text-sm text-gray-600">

@@ -1,6 +1,7 @@
 import { FaArrowRight, FaUser, FaHeart, FaNewspaper } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../hooks/Context/useAuthContext';
+import CustomButton from '../CustomButton';
 
 const CTAButtons = () => {
     const {user} = useAuthContext();

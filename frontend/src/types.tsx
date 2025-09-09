@@ -25,8 +25,9 @@ export type EventData = {
     time: string;
     location: string;
     organizer: {
-        name: string;
+        username: string;
         avatarUrl: string;
+        displayName: string;
     };
     imageUrl?: string;
     attendees: number;
