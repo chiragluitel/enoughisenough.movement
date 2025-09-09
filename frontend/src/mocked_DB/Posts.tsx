@@ -13,7 +13,7 @@ export const samplePosts: PostData[] = [
         media: [
             { type: 'image', url: '/logoexample.jpg' },
             { type: 'image', url: '/logoexample.jpg' },
-            { type: 'video', url: '/videoexample.mp4', posterUrl: '/images/wai_wai.jpg' },
+            { type: 'video', url: '/videoexampleee.mp4', posterUrl: '/images/wai_wai.jpg' },
         ],
         likes: 128,
         comments: 24,
@@ -43,7 +43,7 @@ export const samplePosts: PostData[] = [
             { type: 'image', url: '/logoexample.jpg' },
             { type: 'image', url: '/logoexample.jpg' },
             { type: 'image', url: '/logoexample.jpg' },
-            { type: 'video', url: '/videoexample.mp4', posterUrl: '/logoexample.jpg' },
+            { type: 'video', url: '/videoexamplee.mp4', posterUrl: '/logoexample.jpg' },
             { type: 'image', url: '/logoexample.jpg' },
         ],
         likes: 210,
